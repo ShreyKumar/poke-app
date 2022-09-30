@@ -1,6 +1,6 @@
 import { PokemonType } from "./pokemonUtils";
 
-const API_URL = 'http://localhost:8080'
+const API_URL = process.env.REACT_APP_API_URL
 
 export async function getPokemon (): Promise<PokemonType[]> {
   const rawResponse = await fetch(`${API_URL}/pokemon`)
